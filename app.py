@@ -51,4 +51,4 @@ def database_file(filename):
     return send_from_directory(app.config['DATABASE_FOLDER'], filename)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
