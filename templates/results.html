@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <h1>Top 10 Results</h1>
+    <ul>
+        {% for result in results %}
+            <li><a href="{{ url_for('database_file', filename=result[0].split(os.sep)[-1]) }}">{{ result[0].split(os.sep)[-1] }}</a>: {{ "%.1f"|format(result[1]) }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to form</a>
+</body>
+</html>
